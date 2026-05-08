@@ -74,26 +74,6 @@ You can update:
 - Footer credit text
 - Form action/API integration
 
-## Backend Integration
-
-This is a static frontend template.
-
-To make it dynamic, connect it with:
-
-- WordPress REST API
-- Shrimo Jobs Manager plugin
-- Laravel / Node.js backend
-- Firebase / Supabase
-- Any custom job portal API
-
-Example WordPress API usage:
-
-```js
-fetch('/wp-json/shrimo-jobs-manager/v1/jobs')
-  .then((response) => response.json())
-  .then((data) => console.log(data));
-```
-
 ## Design Notes
 
 - Black and white layout
@@ -105,27 +85,7 @@ fetch('/wp-json/shrimo-jobs-manager/v1/jobs')
 - Practical job portal sections
 - Moderate shadows
 - Controlled border radius
-
-## Layout Rule
-
-The main layout uses a custom `.site-container` class.
-
-```css
-.site-container {
-  max-width: 1100px !important;
-  width: 100%;
-  margin-inline: auto;
-  padding-inline: 20px;
-  box-sizing: border-box;
-}
-
-@media (max-width: 560px) {
-  .site-container {
-    padding-inline: 16px;
-  }
-}
-```
-
+ 
 Do not replace it with Tailwind `container`, `max-w-7xl`, `max-w-screen-xl`, or any 1280px layout wrapper.
 
 ## SEO Checklist Before Publishing
@@ -191,6 +151,36 @@ If you want a production-ready job portal, Shrimo Innovations can help you build
 
 Website: https://shrimo.com/  
 GitHub: https://github.com/shrimo-innovations
+
+## GitHub Pages Auto Deployment
+
+This template includes a GitHub Actions workflow at:
+
+```text
+.github/workflows/deploy-pages.yml
+```
+
+To enable automatic deployment:
+
+1. Push this project to your GitHub repository.
+2. Open your repository on GitHub.
+3. Go to `Settings → Pages`.
+4. Under `Build and deployment`, set `Source` to `GitHub Actions`.
+5. Push changes to the `main` branch.
+
+After setup, every push to `main` will automatically deploy the template to GitHub Pages.
+
+For this repository:
+
+```text
+Repository:
+https://github.com/shrimo-innovations/free-jobs-portal-template
+
+GitHub Pages URL:
+https://shrimo-innovations.github.io/free-jobs-portal-template/
+```
+
+If the site does not appear immediately, check the `Actions` tab in GitHub for deployment status.
 
 ## Version
 
