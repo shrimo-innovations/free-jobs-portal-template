@@ -1,102 +1,114 @@
-# Shrimo Job Portal Starter Template
+# Job Portal Starter Template
 
-A free, SEO-friendly HTML + Tailwind CSS job portal starter template by **Shrimo Innovations**.
+A free HTML + Tailwind CSS starter template for creating a simple job portal website.
 
-## Usage & Credit
+This template is suitable for job listing websites, recruitment agencies, local hiring platforms, placement services, and demo projects.
 
-This template is free for personal use.
+## Preview
 
-You may customize it for learning projects, demos, or personal websites. If you use this template, please give credit to Shrimo Innovations in your website footer.
+Open `index.html` in your browser to preview the template.
 
-Recommended credit text:
+You can also deploy it on GitHub Pages, Netlify, Vercel, cPanel hosting, or any static hosting provider.
 
-```html
-Free template by <a href="https://shrimo.com/">Shrimo Innovations</a>
-```
+## Pages Included
 
-## Included Pages
-
-- `index.html` - Home page with search and featured jobs
-- `jobs.html` - Job listing with demo filters
-- `job-detail.html` - Detailed job page
-- `apply.html` - Candidate application form
-- `companies.html` - Company directory
-- `company-detail.html` - Employer profile
+- `index.html` - Homepage
+- `jobs.html` - Job listing page
+- `job-detail.html` - Job details page
+- `apply.html` - Job application form
+- `companies.html` - Company listing page
+- `company-detail.html` - Company details page
 - `candidate-dashboard.html` - Candidate dashboard demo
 - `employer-dashboard.html` - Employer dashboard demo
-- `post-job.html` - Employer job posting form
-- `pricing.html` - Job posting plan page
-- `about.html` - About template page
-- `contact.html` - Contact and project inquiry page
-- `login.html` and `register.html` - Auth screens
+- `post-job.html` - Post a job form
+- `pricing.html` - Job posting plans
+- `about.html` - About page
+- `contact.html` - Contact page
+- `login.html` - Login page
+- `register.html` - Registration page
 
-## Design Rules
+## Folder Structure
 
-- Mostly black and white UI
-- Red top-left ribbon: `Free Template • Personal Use`
-- Readable typography using Source Sans 3
-- Moderate shadows
-- Controlled border radius
-- Low decorative styling
-- Proper internal linking
-- Floating CTA for full-stack project inquiry
+```text
+job-portal-template/
+├── index.html
+├── jobs.html
+├── job-detail.html
+├── apply.html
+├── companies.html
+├── company-detail.html
+├── candidate-dashboard.html
+├── employer-dashboard.html
+├── post-job.html
+├── pricing.html
+├── about.html
+├── contact.html
+├── login.html
+├── register.html
+├── LICENSE
+├── README.md
+└── assets/
+    ├── css/
+    │   └── styles.css
+    └── js/
+        └── main.js
+```
 
 ## How to Use
 
-1. Download and unzip the package.
+1. Download and unzip the template.
 2. Open `index.html` in your browser.
-3. Edit text, links, company names, and job data directly in the HTML files.
-4. Replace demo forms with your backend or WordPress REST API.
-5. Keep the footer credit if you use it publicly.
+3. Edit the HTML content as needed.
+4. Replace demo links, job data, images, and contact details.
+5. Connect forms to your backend or API if needed.
 
-## Connect to WordPress REST API
+## Customization
 
-This static template can be connected to the **Shrimo Jobs Manager** WordPress plugin REST APIs:
+You can update:
 
-- `/wp-json/shrimo-jobs-manager/v1/jobs`
-- `/wp-json/shrimo-jobs-manager/v1/jobs/{id}`
-- `/wp-json/shrimo-jobs-manager/v1/jobs/{id}/apply`
-- `/wp-json/shrimo-jobs-manager/v1/candidate/dashboard`
-- `/wp-json/shrimo-jobs-manager/v1/employer/dashboard`
+- Website name and logo text
+- Job listings and company names
+- Contact details
+- Social media links
+- SEO title and meta description
+- Footer credit text
+- Form action/API integration
 
-## Shrimo Innovations
+## Backend Integration
 
-Shrimo Innovations builds websites, custom web applications, admin dashboards, WordPress plugins, school portals, job portals, course portals, SEO-ready pages, and full-stack business systems.
+This is a static frontend template.
 
-- Website: https://shrimo.com/
-- GitHub: https://github.com/shrimo-innovations
-- Facebook: https://www.facebook.com/shrimoinnovations/
-- Instagram: https://www.instagram.com/shrimo_innovations/
-- LinkedIn: https://in.linkedin.com/company/shrimo-innovations
-- YouTube: https://www.youtube.com/@shrimo-innovations
+To make it dynamic, connect it with:
 
-## License Note
+- WordPress REST API
+- Shrimo Jobs Manager plugin
+- Laravel / Node.js backend
+- Firebase / Supabase
+- Any custom job portal API
 
-Free for personal use. Please give credit to Shrimo Innovations when you use it.
+Example WordPress API usage:
 
+```js
+fetch('/wp-json/shrimo-jobs-manager/v1/jobs')
+  .then((response) => response.json())
+  .then((data) => console.log(data));
+```
 
-## Layout and SEO Rules
+## Design Notes
 
-This template follows a practical responsive layout system for common laptop and desktop screens. The main content container is capped at `1100px` and includes left/right padding, so the design stays readable on devices around 1300px wide and does not touch the screen edges on mobile devices.
+- Black and white layout
+- Red template ribbon
+- Responsive design
+- SEO-friendly page structure
+- 1100px maximum content width
+- Mobile-safe spacing
+- Practical job portal sections
+- Moderate shadows
+- Controlled border radius
 
-Every HTML page includes SEO-focused metadata:
+## Layout Rule
 
-- Unique page title
-- Unique meta description
-- Meta keywords
-- Canonical URL placeholder
-- Open Graph title and description
-- Twitter card metadata
-- Mobile viewport tag
-- Internal navigation links between related pages
-
-Before publishing, update canonical URLs to match your final live domain.
-
-## Layout Width Rule
-
-This template intentionally avoids Tailwind's default `.container`, `max-w-7xl`, `max-w-screen-xl`, and 1280px wrappers.
-
-Use only the custom `.site-container` wrapper for page sections:
+The main layout uses a custom `.site-container` class.
 
 ```css
 .site-container {
@@ -114,6 +126,75 @@ Use only the custom `.site-container` wrapper for page sections:
 }
 ```
 
-The 1100px width includes left and right padding so content stays readable and does not touch mobile screen edges.
-# free-jobs-portal-template
-# free-jobs-portal-template
+Do not replace it with Tailwind `container`, `max-w-7xl`, `max-w-screen-xl`, or any 1280px layout wrapper.
+
+## SEO Checklist Before Publishing
+
+- Update page titles
+- Update meta descriptions
+- Replace canonical URLs
+- Add real job and company content
+- Use proper heading structure
+- Add alt text to images
+- Connect internal pages properly
+- Submit sitemap after deployment
+
+## Accessibility Notes
+
+- Keep text contrast high
+- Use readable font sizes
+- Add labels to form fields
+- Use descriptive button text
+- Add alt text for images
+- Test on mobile devices
+
+## License
+
+This template is released under the MIT License.
+
+See the `LICENSE` file for details.
+
+## Credit Request
+
+Credit is appreciated but not required under MIT.
+
+If this template helps you, you can keep a small footer credit:
+
+```html
+Free template by <a href="https://shrimo.com/">Shrimo Innovations</a>
+```
+
+## Shrimo Innovations Links
+
+- Website: https://shrimo.com/
+- GitHub: https://github.com/shrimo-innovations
+- Facebook: https://www.facebook.com/shrimoinnovations/
+- Instagram: https://www.instagram.com/shrimo_innovations/
+- LinkedIn: https://in.linkedin.com/company/shrimo-innovations
+- YouTube: https://www.youtube.com/@shrimo-innovations
+
+## Need a Full-Stack Version?
+
+This template is a static frontend starter.
+
+If you want a production-ready job portal, Shrimo Innovations can help you build the complete full-stack system, including:
+
+- WordPress REST API integration
+- Shrimo Jobs Manager plugin setup
+- Candidate and employer dashboards
+- Login, registration, and role-based access
+- Job posting and application workflows
+- Resume upload and secure file handling
+- Admin dashboard and reports
+- Payment or subscription features if required
+- Deployment and SEO setup
+
+Website: https://shrimo.com/  
+GitHub: https://github.com/shrimo-innovations
+
+## Version
+
+Template Version: 1.0.0  
+Package Type: Static HTML + Tailwind CSS starter  
+License: MIT  
+Created by: Shrimo Innovations
