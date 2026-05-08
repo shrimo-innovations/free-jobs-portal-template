@@ -116,3 +116,4 @@ Use only the custom `.site-container` wrapper for page sections:
 
 The 1100px width includes left and right padding so content stays readable and does not touch mobile screen edges.
 # free-jobs-portal-template
+# free-jobs-portal-template
